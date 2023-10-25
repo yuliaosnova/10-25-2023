@@ -3,14 +3,11 @@
 /* vars */
 :root {
   --main-txt-cl: #e01818;
-  /* --secondary-txt-cl: #ffffff; */
   --secondary-txt-cl: blueviolet;
 
-  /* background colors */
   --main-bg: #ce97ea;
   --active-bg: #a058c5;
 
-  /* animation */
   --animation: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

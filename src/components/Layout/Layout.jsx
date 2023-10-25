@@ -1,21 +1,13 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import * as API from "../../servises/api";
-import css from "../../pages/Pages.module.css";
+
+import { useData } from "../Context/Context";
+
+import css from "./Layout.module.css";
 
 export const Layout = () => {
-  const [tabs, setTabs] = useState([]);
+  const { tabs } = useData();
 
-  useEffect(() => {
-    API.fetchData()
-      .then((response) => {
-        console.log(response.data);
-        setTabs(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
   return (
     <>
       <nav>
@@ -28,7 +20,7 @@ export const Layout = () => {
         </ul>
       </nav>
       <main>
-        <Suspense fallback={<div>LOADING...</div>}>
+        <Suspense fallback={<></>}>
           <Outlet />
         </Suspense>
       </main>
