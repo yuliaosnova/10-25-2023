@@ -15,9 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<RedirectRoute component={Home} />} />
-          <Route path="tabs/dummyTable" element={<DummyTable />} />
-          <Route path="tabs/dummyChart" element={<DummyChart />} />
-          <Route path="tabs/dummyList" element={<DummyList />} />
+          <Route path="/dummyTable" element={<DummyTable />} />
+          <Route path="/dummyChart" element={<DummyChart />} />
+          <Route path="/dummyList" element={<DummyList />} />
         </Route>
         <Route path="*" element={<Home />} />
       </Routes>
